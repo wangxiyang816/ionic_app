@@ -1,0 +1,38 @@
+
+
+<ion-modal-view>
+  <div class="bar bar-header">
+    <button class="button button-icon icon ion-ios-arrow-left" style="color:#009689;"
+            ng-click="closedenglu()"></button>
+    <h1 class="title">登录</h1>
+    <button class="button button-clear button-balanced" ng-click="openzhuce1()">去注册</button>
+  </div>
+  <ion-content class="has-footer has-header">
+    <div class="list list-inset" style="margin-bottom: 2px;">
+      <div class="item item-input-inset">
+        <span class="input-label" style="width:15%;">账号</span>
+        <input type="text" placeholder="请输入手机号" ng-model="dlmsg.userphone">
+      </div>
+      <div class="item item-input-inset">
+        <span class="input-label" style="width:15%;">密码</span>
+        <input type="password" placeholder="请输入密码" ng-model="dlmsg.userpwd">
+      </div>
+    </div>
+    <div class="row" style="color:#2097EF;">
+      <div class="col col-33 text-center">忘记密码>></div>
+      <div class="col col-33 col-offset-33 text-center">快捷登陆>></div>
+    </div>
+    <div class="padding" style="padding:0 30px 0;">
+      <button
+        ng-click="dlbtn()"
+        class="button button-balanced button-block">
+        确认登录
+      </button>
+    </div>
+
+  </ion-content>
+</ion-modal-view>
+
+
+
+

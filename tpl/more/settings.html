@@ -1,0 +1,35 @@
+
+
+<ion-modal-view>
+  <div class="bar bar-header">
+    <h1 class="title" style="color:#009689;">设置</h1>
+  </div>
+  <ion-content class="has-footer has-header">
+    <div class="list">
+      <div class="item item-toggle">
+        推送开关
+        <label class="toggle toggle-positive">
+          <input type="checkbox" checked="">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-icon-right" ng-click="showAlert('清除缓存')">
+        清除缓存
+        <i class="icon ion-ios-arrow-right"></i>
+      </div>
+      <div class="item">
+        <button
+          ng-click="close()"
+          class="button button-balanced button-block">
+          关闭
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>
+
+
+
+

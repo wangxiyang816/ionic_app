@@ -1,0 +1,35 @@
+
+<div class="bar bar-header">
+  <button class="button button-clear button-balanced" ng-click="jump('mymsg')" ng-if="!dlmsg.sfdl">登陆</button>
+  <h1 class="title">我的订单</h1>
+  <button class="button button-clear button-balanced" ng-click="openzhuce1()" ng-if="!dlmsg.sfdl">注册</button>
+</div>
+
+<ion-content class="has-header has-footer">
+  <div ng-if="dlmsg.sfdl" class="list">
+    <div class="item row" ng-repeat="dish in orderList">
+      <div class="col col-33">
+        <img class="img-responsive" ng-src="img/{{dish.img}}">
+      </div>
+      <div class="col col-33 col-center">
+        <h3>{{dish.name}}</h3>
+        <p style="color:#f0b840;">价格{{dish.price}}×{{dish.dishCount}}</p>
+      </div>
+      <div class="col col-33 col-center text-right">
+        <button class="button button-outline button-assertive" ng-click="orderdelate($index)">删除？</button>
+      </div>
+    </div>
+    <div class="item text-right">
+      <p style="display: inline-block;vertical-align: middle;color:#f0b840;" class="ng-binding">合计:{{ordersum()}}</p>
+      <button ng-click="showAlert('下单成功！')" class="button button-balanced button-small" style="display: inline-block;vertical-align: middle">确定下单</button>
+      <button ng-click="jump('start')" class="button button-assertive button-small" style="display: inline-block;vertical-align: middle">我在看看</button>
+    </div>
+  </div>
+  <div class="list list-inset" ng-if="!dlmsg.sfdl">
+    <div class="item" style="color:darkred">
+      <span>您还没有登录，无法查询到订单！</span>
+    </div>
+  </div>
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'"></div>

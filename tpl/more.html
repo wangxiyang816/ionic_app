@@ -1,0 +1,45 @@
+<div class="bar bar-header">
+  <h1 class="title" style="color:#009689;">更多</h1>
+</div>
+
+<!--设置界面-->
+<ion-content class="has-footer has-header">
+  <div class="list">
+    <a class="item item-icon-left item-icon-right"ng-click="open()">
+      <i class="icon ion-gear-a"></i>
+      设置
+      <i class="icon ion-ios-arrow-right"></i>
+    </a>
+    <a class="item item-icon-left item-icon-right" ng-click="showAlert('您没有获取权限，请检查设置')">
+      <i class="icon ion-gear-a"></i>
+      扫一扫
+      <i class="icon ion-ios-arrow-right"></i>
+    </a>
+    <a class="item item-icon-left item-icon-right"ng-click="openrequ()">
+      <i class="icon ion-gear-a"></i>
+      意见反馈
+      <i class="icon ion-ios-arrow-right"></i>
+    </a>
+    <a class="item item-icon-left item-icon-right"ng-click="showAlert('请检查网络连接')">
+      <i class="icon ion-gear-a"></i>
+     帮助中心
+      <i class="icon ion-ios-arrow-right"></i>
+    </a>
+    <a class="item item-icon-left item-icon-right"ng-click="showAlert('您的支持就是我们最大的动力！')">
+      <i class="icon ion-gear-a"></i>
+      给我评分
+      <i class="icon ion-ios-arrow-right"></i>
+    </a>
+    <a class="item item-icon-left item-icon-right"ng-click="showAlert('已经是最新版本1.6.10')">
+      <i class="icon ion-gear-a"></i>
+     检查更新
+      <i class="icon ion-ios-arrow-right"></i>
+    </a>
+    <a class="item item-icon-left item-icon-right"ng-click="showAlert('暂无信息')">
+      <i class="icon ion-gear-a"></i>
+      关于我们
+      <i class="icon ion-ios-arrow-right"></i>
+    </a>
+  </div>
+</ion-content>
+<div ng-include="'tpl/include/footer.html'"></div>

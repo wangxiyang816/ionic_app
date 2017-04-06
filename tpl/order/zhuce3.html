@@ -1,0 +1,46 @@
+
+
+<ion-modal-view>
+  <div class="bar bar-header">
+    <button class="button button-icon icon ion-ios-arrow-left" style="color:#009689;"
+            ng-click="closezhuce3()"></button>
+    <h1 class="title">注册</h1>
+  </div>
+  <ion-content class="has-footer has-header">
+    <div class="list">
+      <div class="item item-divider">
+        <div class="row">
+          <div class="col text-center">
+            <span>1.填写手机号</span>
+            <span> > </span>
+            <span>2.填写密码</span>
+            <span> > </span>
+            <span class="fts">3.短信验证</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list list-inset">
+      <div class="item item-input-inset item-button-right">
+        <span class="input-label" style="width:15%;">验证码</span>
+        <input type="text" placeholder="请输入验证码">
+        <button class="button button-energized" ng-click="fsyz()">发送验证码</button>
+      </div>
+    </div>
+    <div class="text-center">
+      <p ng-show="usermsg.useryz">验证码已经发送到{{usermsg.userphone}}</p>
+    </div>
+    <div class="padding">
+      <button
+        ng-click="zcbtn(3)"
+        class="button button-balanced button-block">
+        完成注册
+      </button>
+    </div>
+
+  </ion-content>
+</ion-modal-view>
+
+
+
+

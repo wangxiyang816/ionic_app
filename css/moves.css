@@ -1,0 +1,32 @@
+
+.kflcenter{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.img-responsive{
+  width: 100%;
+  width:100%;
+  height: auto;
+  display: block;
+}
+
+.fts{
+  color:#33CD5F;
+}
+/*背景横条的样式设置*/
+div.bg-color{
+  background-color:#DDDDDD;
+  display: flex;
+  padding: 5px;
+  width: 100%;
+}
+/*取消list的下外边距*/
+div.list-mb{
+  margin-bottom:0;
+}
+
+
+

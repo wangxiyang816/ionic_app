@@ -1,0 +1,69 @@
+
+
+<div ng-include="'tpl/include/header.html'"></div>
+
+<ion-content class="has-header has-footer">
+  <ion-slide-box auto-play="true"   slide-interval=5000  does-continue="true" delegate-handle="slideimgs"
+                 class="slidebox"  on-slide-changed="slideHasChanged($index)" style="margin-top: -1px;">
+    <ion-slide>
+      <div class="box banner"><img ng-src="img/lb1.png" class="img-responsive"></div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box banner"><img ng-src="img/lb1.png" class="img-responsive"></div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box banner"><img ng-src="img/lb1.png" class="img-responsive"></div>
+    </ion-slide>
+  </ion-slide-box>
+  <div class="row"><!--一排图片的展示-->
+    <div class="col col-50">
+        <div class="col-100"><img src="img/lianpiao.png" class="img-responsive"></div>
+        <div  class="col-100 row" style="padding:0;">
+          <div class="col-50"><img src="img/zhuce.png" class="img-responsive"></div>
+          <div class="col-50"><img src="img/yuyue.png" class="img-responsive"></div>
+        </div>
+    </div>
+    <div class="col col-25"><img src="img/quanguo.png"class="img-responsive"></div>
+    <div class="col col-25"><img src="img/tehui.png"class="img-responsive"></div>
+  </div>
+  <div class="list" style="border:0;">
+    <div class="item">特惠套装 <span class="item-note">更多</span></div>
+    <div class="item row">
+      <div class="col-50"><img src="img/sanxia.png" class="img-responsive"></div>
+    </div>
+  </div>
+  <!--搜索框-->
+  <div class="list list-inset">
+    <div class="item item-input">
+      <i class="icon ion-search"></i>
+      <input type="text"
+             ng-model="info.kw"
+             placeholder="请输入景区关键词"/>
+    </div>
+  </div>
+  <!--循环列表-->
+  <div class="list">
+    <div class="item"><b>热门景区</b></div>
+    <div class="item item-thumbnail-left"
+      ng-repeat="dish in dishList" ng-click="jump('detail',{id:$index+1})">
+      <img ng-src="img/{{dish.img}}">
+      <p>{{dish.name}}</p>
+      <p style="color:#FFA731;">￥{{dish.price}}元起</p>
+      <p style="text-decoration:line-through;">￥{{dish.distance}}</p>
+      <p>{{dish.address}}</p>
+    </div>
+  </div>
+  <!--没有更多可以加载了-->
+  <ion-infinite-scroll
+    immediate-check="false"
+    ng-if="hasMore"
+    on-infinite="loadMore()">
+
+  </ion-infinite-scroll>
+  <div class="card" ng-hide="hasMore">
+    <div class="item" style="color:red;">
+      没有更多数据可以加载了
+    </div>
+  </div>
+</ion-content>
+<div ng-include="'tpl/include/footer.html'"></div>

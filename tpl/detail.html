@@ -1,0 +1,69 @@
+<div class="bar bar-header">
+  <button class="button button-icon icon ion-ios-arrow-left" style="color:#009689;"
+          ng-click="jump('start')"></button>
+  <h1 class="title">景区详情</h1>
+  <button class="button button-icon ion-android-expand" style="color:#009689;"></button>
+</div>
+<ion-content class="has-header has-footer">
+    <div>
+      <img ng-src="img/{{detailList.data[0].img_bg}}" class="img-responsive">
+    </div>
+  <div class="row">
+    <div class="col text-center">
+      <i class="icon ion-android-add"></i>
+      <p>图片</p>
+    </div>
+    <div class="col text-center">
+      <i class="icon ion-android-add"></i>
+      <p>周边</p>
+    </div>
+    <div class="col text-center">
+      <i class="icon ion-android-add"></i>
+      <p>简介</p>
+    </div>
+    <div class="col text-center">
+      <i class="icon ion-android-add"></i>
+      <p>点评</p>
+    </div>
+  </div>
+  <div class="bg-color"></div>
+  <div class="list list-mb">
+    <p class="item item-icon-left">
+      <i class="icon ion-checkmark-round fts"></i>
+      {{detailList.data[0].address}}
+    </p>
+    <p class="item item-icon-left">
+      <i class="icon ion-checkmark-round fts"></i>
+      {{detailList.data[0].ryway}}
+    </p>
+  </div>
+  <div class="bg-color"></div>
+  <div class="list list-mb">
+    <div class="item item-icon-left">
+      <i class="icon ion-checkmark-round fts"></i>
+      预定说明
+    </div>
+    <div class="item item-body">
+      <p style="margin-top:4px;margin-bottom:4px;padding-top:2px;">开放时间:{{detailList.data[0].kftime}}</p>
+      <p style="margin-top:4px;margin-bottom:4px;padding-top:2px;">入园方式:{{detailList.data[0].ryway}}</p>
+      <p style="margin-top:4px;margin-bottom:4px;padding-top:2px;">取票方式:{{detailList.data[0].qpway}}</p>
+    </div>
+  </div>
+  <div class="bg-color"></div>
+  <div class="list list-mb">
+    <div class="item item-icon-left">
+      <i class="icon ion-checkmark-round fts"></i>
+      点评
+    </div>
+    <div class="item item-body">
+      <p style="margin-top:4px;margin-bottom:4px;padding-top:2px;">暂无评论</p>
+    </div>
+  </div>
+
+</ion-content>
+<div class="bar bar-footer">
+  <button class="button button-balanced button-block" style="top:-8px;" ng-click="detailOrder()">
+    <span ng-show="detailYd">立即预定</span>
+    <span ng-hide="detailYd">去结算</span>
+  </button>
+</div>
